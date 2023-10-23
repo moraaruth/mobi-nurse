@@ -410,7 +410,7 @@
           (function () {
               var options = {
                   whatsapp: "+254769562611", 
-                  call_to_action: "Message us", 
+                  call_to_action: "Chat with us", // Change the button text here
                   position: "left", 
               };
               var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
@@ -418,7 +418,9 @@
               s.type = 'text/javascript';
               s.async = true;
               s.src = url + '/widget-send-button/js/init.js';
-              s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+              s.onload = function () {
+                  WhWidgetSendButton.init(host, proto, options);
+              };
               var x = document.getElementsByTagName('script')[0];
               x.parentNode.insertBefore(s, x);
           })();
